@@ -116,7 +116,7 @@ function StudentFields({ index, onChange, values }: StudentFieldsProps) {
       <div className="mb-4 text-[10px] font-bold uppercase tracking-widest text-amber-200">
         Participant {index}
       </div>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         <Field
           label="Full name"
           name={`student${index}Name`}
@@ -294,14 +294,14 @@ export default function Page() {
             href="#top"
             className="flex items-center gap-3 transition hover:opacity-90"
           >
-              <div className="w-[40px] h-[40px] rounded-full overflow-hidden bg-white/5">
-                <Image
-                  src={`RCCGLogo.png`}
-                  alt="RCCG Logo"
-                  width={50}
-                  height={50}
-                />
-              </div>
+            <div className="shrink-0 w-[40px] h-[40px] relative flex items-center justify-center rounded-full overflow-hidden bg-white/5">
+              <Image
+                src={`RCCGLogo.png`}
+                alt="RCCG Logo"
+                width={50}
+                height={50}
+              />
+            </div>
             <span className="text-xs font-bold uppercase tracking-[.18em] text-white">
               Beautiful Gate
               <span className="text-amber-300">{` `}Parish</span>
@@ -398,7 +398,7 @@ export default function Page() {
               </span>
               <span className="flex items-center gap-2">
                 <MapPin className="text-amber-300" />
-                Ibeju-Lekki, Lagos
+                1-8 Redeemed Close, Slot B/Stop, Adeba-Lakowe, Lagos
               </span>
             </div>
           </div>
@@ -509,20 +509,21 @@ export default function Page() {
           </div>
         </div>
       </motion.section>
+
       <motion.section
         id="register"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.18 }}
         transition={{ duration: 0.65 }}
-        className="border-t border-white/10 bg-[#07183d] px-5 py-24 sm:px-8"
+        className="border-t border-white/10 bg-[#07183d] px-5 py-24 sm:px-4"
       >
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <div>
             <div className="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-amber-300">
               Secure your place
             </div>
-            <h2 className="font-display text-4xl text-white sm:text-5xl">
+            <h2 className="font-display text-4xl text-white md:text-5xl w-full">
               Register the next generation of wordsmiths.
             </h2>
             <p className="mt-5 text-sm leading-7 text-slate-300">
@@ -532,7 +533,7 @@ export default function Page() {
             </p>
           </div>
           <div
-            className={`rounded-3xl border border-white/10 bg-white/[.055] p-6 sm:p-8 ${cardHover}`}
+            className={`rounded-3xl border border-white/10 bg-white/[.055] p-6 md:p-5 ${cardHover} w-full`}
           >
             {done ? (
               <div className="py-16 text-center">
@@ -542,24 +543,24 @@ export default function Page() {
             ) : (
               // Registration Form Here
               <>
-                <div className="mb-8 flex gap-2 overflow-x-auto">
+                <div className="w-full mb-8 flex gap-2 flex-wrap">
                   {steps.map((item, i) => (
                     <button
                       type="button"
                       key={item}
                       onClick={() => setStep(i)}
-                      className={`shrink-0 rounded-full px-3 py-2 text-[10px] font-bold uppercase tracking-wider transition hover:-translate-y-0.5 
-          ${
-            i === step
-              ? "bg-amber-300 text-[#061334]"
-              : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-amber-200"
-          }`}
+                      className={`shrink-0 rounded-full px-3 sm:px-2 py-2 text-[10px] font-bold uppercase tracking-wider transition hover:-translate-y-0.5 
+        ${
+          i === step
+            ? "bg-amber-300 text-[#061334]"
+            : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-amber-200"
+        }`}
                     >
                       {i + 1}.{item}
                     </button>
                   ))}
                 </div>
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid gap-5 md:grid-cols-2 w-full">
                   {step === 0 && (
                     <>
                       <Field
@@ -607,7 +608,7 @@ export default function Page() {
                   )}
                   {step === 2 && (
                     <>
-                      <p className="sm:col-span-2 text-sm leading-6 text-slate-300">
+                      <p className="md:col-span-2 text-sm leading-6 text-slate-300 w-full">
                         Enter all four secondary-school participants. Class must
                         be JSS 1–SSS 3. Age should typically fall between 10 and
                         19.
@@ -635,10 +636,10 @@ export default function Page() {
                     </>
                   )}
                   {step === 3 && (
-                    <div className="sm:col-span-2 grid gap-4">
+                    <div className="md:col-span-2 grid gap-4">
                       <label
                         className={`flex gap-3 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-300 
-                        ${cardHover}`}
+                      ${cardHover}`}
                       >
                         <input
                           type="checkbox"
@@ -658,7 +659,7 @@ export default function Page() {
                       </label>
                       <label
                         className={`flex gap-3 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-slate-300 
-                          ${cardHover}`}
+                        ${cardHover}`}
                       >
                         <input
                           type="checkbox"
@@ -714,7 +715,7 @@ export default function Page() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.18 }}
         transition={{ duration: 0.65 }}
-        className="px-5 py-24 sm:px-8"
+        className="px-5 lg:w-2/4 mx-auto py-24 sm:px-8"
       >
         <div className="mx-auto max-w-xl text-center">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[.25em] text-amber-300">

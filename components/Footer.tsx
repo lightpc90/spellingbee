@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <div className="flex items-center gap-3">
-            <div className="w-[40px] h-[40px] rounded-full overflow-hidden bg-white/5">
+            <div className="shrink-0 w-[40px] h-[40px] rounded-full overflow-hidden bg-white/5">
               <Image
                 src={`RCCGLogo.png`}
                 alt="RCCG Logo"
@@ -113,10 +113,10 @@ const Footer = () => {
           </p>
           <a
             className="mt-4 flex items-center gap-3 text-sm text-white transition hover:text-amber-300"
-            href="tel:+2348000000000"
+            href="tel:+234 803 525 5667"
           >
             <Phone className="text-amber-300" />
-            +234 800 000 0000
+            +234 803 525 5667
           </a>
         </div>
       </div>
