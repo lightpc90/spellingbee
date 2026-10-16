@@ -154,7 +154,7 @@ function StudentFields({ index, onChange, values }: StudentFieldsProps) {
           min={10}
           max={19}
           placeholder="e.g. 14"
-          value={values.age}
+          value={values.age === 0 ? "" : values.age} // Display empty string if age is 0
           onChange={onChange}
         />
       </div>
