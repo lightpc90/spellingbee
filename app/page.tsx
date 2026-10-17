@@ -9,19 +9,12 @@ import {
   Clock3,
   Download,
   Focus,
-  GraduationCap,
   LockKeyhole,
-  Send,
-  Mail,
   MapPin,
-  Phone,
-  Sparkles,
   Trophy,
-  Users,
   Zap,
   Moon,
   Sun,
-  NotebookPen,
 } from "lucide-react";
 import { RegistrationInsert } from "@/types/supabase";
 import { supabase } from "@/lib/supabaseClient";
