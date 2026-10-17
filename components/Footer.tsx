@@ -96,7 +96,7 @@ const Footer = () => {
             </span>
             <span className="flex gap-3">
               <Clock3 className="shrink-0 text-amber-300" />
-              31 October 2026
+              31st October - 5th December 2026
             </span>
             <span className="flex gap-3">
               <Users className="shrink-0 text-amber-300" />4 students + 1 coach

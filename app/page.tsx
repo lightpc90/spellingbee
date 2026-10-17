@@ -54,7 +54,7 @@ function Countdown() {
     const id = setInterval(tick, 1000)
     return () => clearInterval(id)
   }, [])
-  return <div className="font-mono text-2xl font-bold tracking-widest text-white sm:text-3xl">{value}</div>
+  return <div className="font-mono text-xl font-bold tracking-widest text-white sm:text-3xl">{value}</div>
 }
 
 function Field({
@@ -394,7 +394,7 @@ export default function Page() {
             <div className="mt-12 flex flex-wrap gap-7 text-xs text-slate-300">
               <span className="flex items-center gap-2">
                 <Clock3 className="text-amber-300" />
-                31 October 2026
+                31st October - 5th December 2026
               </span>
               <span className="flex items-center gap-2">
                 <MapPin className="text-amber-300" />
@@ -490,6 +490,7 @@ export default function Page() {
               ["1st place", "₦500,000"],
               ["2nd place", "₦300,000"],
               ["3rd place", "₦200,000"],
+              ["4th-10th place", "₦50,000 Each"],
             ].map(([place, amount], i) => (
               <div
                 key={place}
@@ -529,7 +530,7 @@ export default function Page() {
             <p className="mt-5 text-sm leading-7 text-slate-300">
               Open to secondary schools only. Register four participants with
               full name, class (JSS 1–SSS 3), and age. One school. Four
-              students. One unforgettable day.
+              students. One unforgettable experience.
             </p>
           </div>
           <div
@@ -694,7 +695,7 @@ export default function Page() {
                   >
                     {isSubmitting ? (
                       <div className="text-center">
-                        <p className="text-sm text-slate-300">Submitting...</p>
+                        <p className="text-sm text-slate-700">Submitting...</p>
                       </div>
                     ) : step === 3 ? (
                       "Submit registration"
